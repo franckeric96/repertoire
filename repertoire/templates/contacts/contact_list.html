@@ -1,0 +1,37 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+      <title> contact_list </title>
+    {% endblock title %}
+
+{% block content %}
+<div class="container text-center">
+<div class="mt-2">
+    <a href="{% url 'new_contact' %}" class="btn btn-info">Ajouter contact</a>
+</div>
+<br>
+<div class="row">
+    <div style="margin: auto 300px;">
+        <div class="card card-body">
+            {% if contacts %}
+            <ul class="list-group list-group-flush">
+                {% for contact in contacts %}
+                <li class="list-group-item">
+                    <a href="{% url 'details' contact.id %}">
+                        {{ contact.nom }} {{ contact.prenom }}
+
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %} 
+                <h1>Votre repertoire ne contient aucun contact</h1>
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+{% endblock %}

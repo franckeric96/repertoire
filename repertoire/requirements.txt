@@ -1,0 +1,14 @@
+Django==2.2.10
+django-admin-interface==0.12.2
+django-colorfield==0.3.2
+django-filebrowser-no-grappelli==3.8.0
+django-flat-responsive==2.0
+django-flat-theme==1.1.4
+django-tinymce4-lite==1.8.0
+jsmin==2.2.2
+Pillow==7.1.1
+pkg-resources==0.0.0
+pyenchant==3.1.1
+pytz==2019.3
+six==1.15.0
+sqlparse==0.3.1
