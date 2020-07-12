@@ -1,0 +1,44 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+      <title> new_contact </title>
+    {% endblock title %}
+
+{% block content %}
+
+<div class="row">
+    <div style="margin: auto 300px;">
+        <div class="card card-body">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="nom" >Nom :</label>
+                    <input type="text" class="form-control" name="nom">
+                   
+                </div>
+
+                <div class="form-group">
+                    <label for="prenom" >Prenom :</label>
+                    <input type="text" class="form-control" name="prenom">
+                   
+                </div>
+                <div class="form-group">
+                    <label for="telephone" >Telephone :</label>
+                    <input type="text" class="form-control" name="telephone">
+                   
+                </div>
+                <div class="form-group">
+                    <label for="email" >Email :</label>
+                    <input type="text" class="form-control" name="email">
+                   
+                </div>
+                <button class="btn btn-primary " type="submit" >Enregistrer </button>
+                <a href="{% url 'contacts' %}" class="btn btn-info">Retour</a>
+
+            </form>
+        </div>
+    </div>
+</div>
+    <br>
+{% endblock %}
+    
